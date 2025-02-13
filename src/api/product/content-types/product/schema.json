@@ -4,38 +4,41 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Price": {
+    "price": {
       "type": "integer"
     },
-    "Image": {
-      "type": "string"
-    },
-    "Colors": {
+    "colors": {
       "type": "enumeration",
       "enum": [
-        "#ff0000"
+        "#ff0000",
+        "#ccee00",
+        "#ga4321"
       ]
     },
-    "Company": {
+    "company": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Category": {
+    "category": {
       "type": "string"
     },
-    "Shipping": {
+    "shipping": {
       "type": "boolean"
+    },
+    "image": {
+      "type": "string"
     }
   }
 }

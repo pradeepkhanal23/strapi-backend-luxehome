@@ -372,7 +372,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
-    displayName: 'Product';
+    description: '';
+    displayName: 'product';
     pluralName: 'products';
     singularName: 'product';
   };
@@ -380,24 +381,24 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Category: Schema.Attribute.String;
-    Colors: Schema.Attribute.Enumeration<['#ff0000']>;
-    Company: Schema.Attribute.String;
+    category: Schema.Attribute.String;
+    colors: Schema.Attribute.Enumeration<['#ff0000', '#ccee00', '#ga4321']>;
+    company: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
-    Price: Schema.Attribute.Integer;
+    name: Schema.Attribute.String;
+    price: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
-    Shipping: Schema.Attribute.Boolean;
+    shipping: Schema.Attribute.Boolean;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
