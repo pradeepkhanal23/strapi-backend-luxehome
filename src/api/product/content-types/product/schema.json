@@ -17,14 +17,6 @@
     "price": {
       "type": "integer"
     },
-    "colors": {
-      "type": "enumeration",
-      "enum": [
-        "#ff0000",
-        "#ccee00",
-        "#ga4321"
-      ]
-    },
     "company": {
       "type": "string"
     },
@@ -39,6 +31,15 @@
     },
     "image": {
       "type": "string"
+    },
+    "colors": {
+      "type": "json"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "featured": {
+      "type": "boolean"
     }
   }
 }
